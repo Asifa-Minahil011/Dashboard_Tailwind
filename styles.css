@@ -1,0 +1,63 @@
+:root {
+  --color-bg: #F3F4F8;
+  --color-surface: #FFFFFF;
+  --color-ink: #12141C;
+  --color-muted: #6B7080;
+  --color-border: #E4E6EE;
+  --color-primary: #2A3ED1;
+  --color-primary-soft: #EAEBFA;
+  --color-positive: #12A594;
+  --color-positive-soft: #E3F5F2;
+  --color-negative: #E2574C;
+  --color-negative-soft: #FBEAE8;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0E1016;
+  --color-surface: #171923;
+  --color-ink: #EDEEF3;
+  --color-muted: #9195A6;
+  --color-border: #2A2D3A;
+  --color-primary: #6C7CFF;
+  --color-primary-soft: #232645;
+  --color-positive: #3FCDBB;
+  --color-positive-soft: #14332F;
+  --color-negative: #F17E76;
+  --color-negative-soft: #3A1E1D;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
